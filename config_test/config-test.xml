@@ -1,0 +1,33 @@
+<FileWatchTower schemaversion="1.0">
+  <HashAlgorithms>md5,sha256,imphash,ssdeep</HashAlgorithms>
+  <CheckRevocation>true</CheckRevocation>
+  <AnalyzeDiscImages>true</AnalyzeDiscImages>
+  <AnalyzeLnkFiles>true</AnalyzeLnkFiles>
+  <ExtractFileNtfsZoneIdentifierInformation>true</ExtractFileNtfsZoneIdentifierInformation>
+  
+  <MaxTargetFileSize>33554432</MaxTargetFileSize>
+
+  <!-- Write events to Windows Event logs.-->
+  <WriteToWinEventLogs>true</WriteToWinEventLogs>
+
+   <!-- accepted values: 'json', 'xml' -->
+  <WinEventLogOutputFormat>xml</WinEventLogOutputFormat>
+
+
+  <!-- Write events to a file. Leave empty to disable file reporter -->
+  <LogDirectoryPath>C:\logs</LogDirectoryPath>
+
+  <!-- accepted values: 'xml', 'json'. -->
+  <LogFileOutputFormat>json</LogFileOutputFormat>
+
+ 
+  <!-- accepted values: 'json' -->
+  <ApiLogOutputFormat>json</ApiLogOutputFormat>
+
+  <!-- Leave empty to disable API reporter -->
+  <ApiLogEndpointUrl></ApiLogEndpointUrl>
+  <ApiExtraHeaders>
+    <ApiExtraHeader>Authorization: OAuth xxx</ApiExtraHeader>
+    <ApiExtraHeader>User-agent: curl</ApiExtraHeader>
+  </ApiExtraHeaders>
+</FileWatchTower>
